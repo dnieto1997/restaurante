@@ -8,7 +8,7 @@ import DetallePlatillo from './views/DetallePlatillo';
 import Menu from './views/Menu';
 import NuevaOrden from './views/NuevaOrden';
 import ProgresoPedido from './views/ProgresoPedido';
-import ResumenPedido from './views/ResumenPedido';
+import ResumenPedido from './views/ResumenPedido'
 
 
 
