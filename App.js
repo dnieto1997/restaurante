@@ -11,6 +11,10 @@ import ProgresoPedido from './views/ProgresoPedido';
 import ResumenPedido from './views/ResumenPedido'
 
 
+import FirebaseState from './context/firebase/FirebaseState';
+import PedidosState from './context/pedidos/pedidosState';
+
+
 
 const Stack =createStackNavigator()
 
@@ -18,11 +22,14 @@ const Stack =createStackNavigator()
 const App = () => {
   return (
     <>
+    <FirebaseState>
+      <PedidosState>
       <NavigationContainer>
         <Stack.Navigator
         screenOptions={{
           headerStyle:{backgroundColor:'#FFDA00'},
-          headerTitleStyle:{fontWeight:'bold'}
+          headerTitleStyle:{fontWeight:'bold'},
+          headerTintColor:'#000'
         }}
         >
   <Stack.Screen
@@ -71,11 +78,11 @@ const App = () => {
 
 
       </NavigationContainer>
+      </PedidosState>
 
 
 
-
-
+      </FirebaseState>
     </>
   )
 }
